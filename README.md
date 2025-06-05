@@ -1,35 +1,35 @@
 [![Linkedin](https://img.shields.io/static/v1.svg?logo=linkedin&color=f78A38&labelColor=083468&logoColor=ffffff&style=for-the-badge&label=Linkedin&message=Public)](https://www.linkedin.com/in/gabriela-silveira-b7711221a/) 
-# App Builded by Gabriela with Nest JS using TS template
+# Aplicativo Desenvolvido com NestJS usando template TS
 
-Project Description
+Descrição do Projeto
 
-# Get Starter
+# Como começar
 
-## Install Dependencies
+## Instalar dependências
 
-In the root of the project, run the command:
+No diretório raiz do projeto, execute o comando:
 
 ```bash
 npm install
 ```
 
-## Run Project
+## Rodar o projeto
 
-Yet in the root of the project, run the command:
+Ainda no diretório raiz do projeto, execute o comando:
 
 ```bash
 npm start
 ```
 
-## Resources
+## Recursos
 
-- Resource 1
-- Resource 2
+- Recurso 1
+- Recurso 2
 - ...n.
 
-## Support
+## Suporte
 
-The documentation and collections (to use with postman or other http client request) are on doc folder, in root directory
+A documentação e as coleções (para usar com Postman ou outro cliente de requisição HTTP) estão na pasta doc, no diretório raiz do projeto.
 
 ## License
 
