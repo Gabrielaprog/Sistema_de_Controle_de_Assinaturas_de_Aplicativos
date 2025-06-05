@@ -1,0 +1,363 @@
+{
+	"info": {
+		"_postman_id": "64cd076d-4b77-4c31-bf9a-16ac4c9321fe",
+		"name": "Desenvolvimento_de_Sistemas_backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25724674"
+	},
+	"item": [
+		{
+			"name": "ServicoCadastramento",
+			"item": [
+				{
+					"name": "clients",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/servcad/clientes",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								
+								"servcad",
+								"clientes"
+							]
+						},
+						"description": "### GET /clientes\n\nO endpoint recupera uma lista de clientes. A resposta retorna um código de status 200 e um tipo de conteúdo de application/json.\n\n### Request\n\nNenhum body é necessário para esse endpoint."
+					},
+					"response": []
+				},
+				{
+					"name": "subscription",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"codCli\": 1,\r\n    \"codApp\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/servcad/assinaturas",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								
+								"servcad",
+								"assinaturas"
+							]
+						},
+						"description": "### POST /NovaAssinatura\n\nEsse ponto de extremidade faz uma solicitação HTTP POST para localhost:3000/servcad/assinatura a fim de adicionar uma assinatura.\n\n#### Request Body\n\n- `codCli` (número): O código do cliente.\n    \n- `codApp` (número): O código do aplicativo."
+					},
+					"response": []
+				},
+				{
+					"name": "applications",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/servcad/aplicativos",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								
+								"aplicativos"
+							]
+						},
+						"description": "### GET /aplicativos\n\nO endpoint faz uma solicitação para obter a lista de aplicativos.\n\n### Request\n\nNenhum body é necessário para esse endpoint."
+					},
+					"response": []
+				},
+				{
+					"name": "edit-app",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"custo\": 0.01\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/servcad/aplicativos/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"servcad",
+								"aplicativos",
+								"1"
+							]
+						},
+						"description": "### PATCH /servcad/aplicativos/:idAplicativo\n\nO endpoint é usado para atualizar os detalhes de um aplicativo específico. Neste exemplo, o \"1\" se ferere ao ID do aplicativo que se deseja atualizar.\n\n### Request Body\n\nA solicitação deve incluir os seguintes parâmetros no corpo bruto da solicitação:\n\n- `custo` (número, obrigatório): O custo atualizado do aplicativo."
+					},
+					"response": []
+				},
+				{
+					"name": "subscriptions",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/servcad/assinaturas/ATIVAS",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"servcad",
+								"assinaturas",
+								"ATIVAS"
+							]
+						},
+						"description": "### GET /servcad/assinaturas/{tipo}\n\nO endpoint recupera uma lista de assinaturas ativas.\n\n### Request\n\nNenhum body é necessário para esse endpoint."
+					},
+					"response": []
+				},
+				{
+					"name": "Assinaturas Todas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/servcad/assinaturas/TODAS",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"servcad",
+								"assinaturas",
+								"TODAS"
+							]
+						},
+						"description": "### GET /servcad/assinaturas/{tipo}\n\nO endpoint recupera uma lista com todas as assinaturas.\n\n### Request\n\nNenhum body é necessário para esse endpoint."
+					},
+					"response": []
+				},
+				{
+					"name": "Assinaturas Canceladas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/servcad/assinaturas/CANCELADAS",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"servcad",
+								"assinaturas",
+								"CANCELADAS"
+							]
+						},
+						"description": "### GET /servcad/assinaturas/{tipo}\n\nO endpoint recupera uma lista de assinaturas canceladas.\n\n### Request\n\nNenhum body é necessário para esse endpoint."
+					},
+					"response": []
+				},
+				{
+					"name": "Assinaturas por Cliente",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/assinaturas/:codCli",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								
+								"assinaturas",
+								"codCli"
+							]
+						},
+						"description": "### GET /assinaturas/:codcli\n\nO endpoint recupera informações sobre a atribuição de serviço de um cliente específico.\n\n### Request\n\nNenhum body é necessário para esse endpoint."
+					},
+					"response": []
+				},
+				{
+					"name": "Assinaturas por Aplicativo",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/assCliente/:codApp",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								
+								"assCliente",
+								"codApp"
+							]
+						},
+						"description": "### GET /assCliente/:codapp\n\nO endpoint recupera uma entrada específica do catálogo da lista de assinaturas por ID do aplicativo.\n\n### Request\n\nNenhum body é necessário para esse endpoint."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ServicoPagamentos",
+			"item": [
+				{
+					"name": "Registrar Pagamento",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dia\": 1,\r\n    \"mes\": 1,\r\n    \"ano\": 2025,\r\n    \"codAss\": 1,\r\n    \"valorPago\": 0.01\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/registrarpagamento",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"registrarpagamento"
+							]
+						},
+						"description": "### POST /registrarpagamento\n\nO endpoint é usado para registrar um pagamento. A solicitação deve incluir os seguintes parâmetros no body.\n\n#### Request Body\n\n- `dia` (número): O dia do pagamento.\n    \n- `mes` (número): O mês do pagamento.\n    \n- `ano` (número): O ano do pagamento.\n    \n- `codAss` (número): O código associado ao pagamento.\n    \n- `valorPago` (número): O valor pago."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ServicoAssinaturasValidas",
+			"item": [
+				{
+					"name": "Assinaturas Validas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/assinvalidas/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"assinvalidas",
+								"1"
+							]
+						},
+						"description": "### GET /assinvalidas/:codass\n\nO endpoint recupera informações sobre a validade de uma assinatura. Neste caso, usamos como exemplo a assinatura com código (codass) de número 1.\n\n### Request\n\nNenhum body é necessário para esse endpoint."
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
